@@ -5,81 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="/js/jquery-3.4.1.slim.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
     <title>Times Of Mathematics</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $('.toggle').click(function(){
+                $('ul').toggleClass('active');
+            });
+
+            $('.nav-list').click(function(){
+                $('ul').toggleClass('active');
+            });
+
+            $(window).scroll(function(){
+                $('ul').removeClass('active');
+                if($(window).scrollTop() > 0) {
+                    $('.main-header').removeClass('notScrolled');
+                    $('.main-header').addClass('scrolled');
+                } else {
+                    $('.main-header').removeClass('scrolled');
+                    $('.main-header').addClass('notScrolled');
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-    <!-- Header Toolbar -->
-    <header id="main-header">
-        
-        <nav id="navbar">
-            <div class="titlebar-item">
-                <h1>Times Of Mathematics</h1>
-            </div>
-            <div class="titlebar-item">
-                <ul>
-                    <li><a href="#showcase">Home</a></li>
-                    <li><a href="#section-a">About</a></li>
-                    <li><a href="#section-b">Services</a></li>
-                    <li><a href="#section-c">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- Header Showcase -->
-    <section id="showcase" class="grid">        
+    <!-- Header -->
+    <header id="showcase" class="grid">        
         <div class="bg-image"></div>
-        <div class="content-wrap">
-            <h1>Welcome</h1>
-            <p>Unlease your potential. Driven by young and experienced professionals.
-            </p>
-            <a href="#section-b" class="btn">Read More</a>
+        <!-- Toolbar -->
+        <div class="main-header">
+            <a href="/" class="logo"><img src="images/logo.png"></a>
+            <a class="toggle">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul class="nav-list">
+                <li><a href="#section-a">About</a></li>
+                <li><a href="#section-b">Services</a></li>
+                <li><a href="#section-c">Team</a></li>
+                <li><a href="#section-b">Portfolio</a></li>
+                <li><a href="#section-d">Contact</a></li>
+            </ul>   
         </div>
-    </section>
+        <!-- Showcase -->
+        <div class="content-wrap">
+            <h1>Times of Mathematics</h1>
+            <!-- <p>MOTIVATION&nbsp;&nbsp;<strong>|</strong>&nbsp;&nbsp;MENTORSHIP&nbsp;&nbsp;<strong>|</strong>&nbsp;&nbsp;TRAINING -->
+            </p>
+            <p>
+                <strong>B.SC, M.SC, CTET, UTET, UPTET, LT, TGT, PGT, COMPETITIVE EXAMS, IIT JAM</strong>
+            </p>
+            <a href="#main" class="btn">Read More</a>
+        </div>
+    </header>
 
     <!-- Main Area -->
     <main id="main">
         <!-- Section A -->
         <section id="section-a" class="grid">
             <div class="content-wrap">
-                <h2 class="content-title">Training and Development</h2>
+                <h2 class="content-title">About Us</h2>
                 <div class="content-text">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti nulla debitis ipsa reiciendis, numquam hic eaque qui magnam maxime iste illo? Quasi saepe mollitia odio facere repudiandae nobis ipsam unde ratione perspiciatis illum accusamus dicta libero nam, aperiam, suscipit iusto.</p> 
+                    <p>
+                        Times of Mathematics since 2015 established in small town "Laksar" (Haridwar, Uttarakhand) by young and experienced professionals aims to provide not just the training but the guidance and motivation that candidates actually need.
+                        At Times of Mathematics we don't just focus on delivering sessions or completing syllabus but sharing experiences and make you see things in simpler way.
+                        If you feel confused which way to go you are always welcome to <a href="#section-d">contact us</a>  and in the era of unlimited calling that doesn't charge of course. Follow us on <a href="https://www.facebook.com/timesofmathematics">facebook</a> for more updates or queries. 
+                    </p> 
                 </div>                
             </div>
         </section>
 
         <!-- Section B -->
         <section id="section-b" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">What we Offer</h2>             
+            </div>
             <ul>
                 <li>
                     <div class="card">
-                        <img src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="book-image">
+                        <!-- <img src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="book-image"> -->
+                        <img src="/images/competitive.jpeg" alt="">
                         <div class="card-content">
-                            <h3 class="card-title">Algebra</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Delectus soluta ea quod earum, possimus unde laudantium facilis debitis neque. Expedita.
+                            <h3 class="card-title">Competitive Exams</h3>
+                            <p>
+                                IIT JAM <br>
+                                All Competitive Exams <br>
                             </p>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="card">
-                        <img src="https://images.pexels.com/photos/21661/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="book-image">
+                        <!-- <img src="https://images.pexels.com/photos/21661/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="book-image"> -->
+                        <img src="/images/core.jpeg" alt="">
                         <div class="card-content">
-                            <h3 class="card-title">Geometry</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Delectus soluta ea quod earum, possimus unde laudantium facilis debitis neque. Expedita.
+                            <h3 class="card-title">Core Courses</h3>
+                            <p>
+                                B.Sc (PCM) <br>M.Sc (Mathematics) <br>
                             </p>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="card">
-                        <img src="https://images.pexels.com/photos/95916/pexels-photo-95916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="book-image">
+                        <!-- <img src="https://images.pexels.com/photos/95916/pexels-photo-95916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="book-image"> -->
+                        <img src="/images/teacher.jpeg" alt="">
                         <div class="card-content">
-                            <h3 class="card-title">Linear Mathematics</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Delectus soluta ea quod earum, possimus unde laudantium facilis debitis neque. Expedita.
+                            <h3 class="card-title">Teaching Prep</h3>
+                            <p>
+                                    CTET <br>UTET <br>UPTET <br>LT <br>(All Subjects)
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <!-- <img src="https://images.pexels.com/photos/95916/pexels-photo-95916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="book-image"> -->
+                        <img src="/images/counselling.jpeg" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Others</h3>
+                            <p>
+                                    Counselling <br>Seminars <br>(Mathematics and Career)
                             </p>
                         </div>
                     </div>
@@ -90,24 +140,58 @@
         <!-- Section C -->
         <section id="section-c" class="grid">
             <div class="content-wrap">
-                <h2 class="content-title">We make best out of You</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quod sint alias nihil, 
-                    ut enim blanditiis porro deleniti veritatis maxime.</p>
+                <h2 class="content-title">Faculties</h2>
             </div>
+            <ul>
+                <li>
+                    <div class="card">
+                        <img src="/images/Amit.jpeg" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Amit Pandey</h3>
+                            <p>
+                                Experience : 7 Years 
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src="/images/kamal.jpeg" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Kamal Tyagi</h3>
+                            <p>
+                                Experience : 4 Years
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src="/images/Ravinder.jpeg" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Ravinder Sharma</h3>
+                            <p>
+                                Experience : 8 Years
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </section>
 
         <!-- Section D -->
         <section id="section-d" class="grid">
             <div class="box">
                 <h2 class="content-title">Contact Us</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel facilis voluptatem atque 
-                    excepturi officia necessitatibus assumenda nemo doloremque? Praesentium, a.</p>
-                <p>contact@timeofmaths.in</p>
+                <a><i class="fa fa-phone-square"></i>&nbsp;+91 8126185563 (Amit Pandey)</a> <br>
+                <a><i class="fa fa-phone-square"></i>&nbsp;+91 9760093732 (Kamal Tyagi)</a> <br>
+                <span><i class="fa fa-facebook-square"></i>&nbsp;</span><a href="https://www.facebook.com/timesofmathematics">facebook.com/timesofmathematics</a> <br>
+                <a><i class="fa fa-envelope-o"></i>&nbsp;timesofmaths@gmail.com</a><br>
             </div>
             <div class="box">
-                <h2 class="content-title">About our Institution</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere eveniet blanditiis error, 
-                    eaque ad non veniam voluptas explicabo vel ullam?</p>
+                <h2 class="content-title">Our Centers : </h2>
+                <p><strong>Laksar : </strong> Garg dharam kanta, Laksar, Haridwar</p>
+                <p><strong>Roorkee : </strong> <i>Coming soon ....</i></p>
             </div>
         </section>
     </main>
@@ -115,7 +199,8 @@
     <!-- Footer -->
     <footer id="main-footer" class="grid">
         <div>Copyright &copy; 2019 Times of Mathematics</div>
-        <div>Project by <a href="https://timeofmaths.com" target="_blank">Times Of Mathematics</a></div>
+        <div>Project by <a href="/">Times Of Mathematics</a></div>
+        <div>Designed and Developed by <a href="https://in.linkedin.com/in/moolshankar" target="_blank">Moolshankar Tyagi</a></div>
     </footer>
 </body>
 </html>
