@@ -66,7 +66,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 120%;
     z-index: -1;
     opacity: 0.4;
 }
@@ -148,11 +148,13 @@ p {
     padding-bottom: 2em;
 }
 
+/* Section B */
+
 #section-b {
     padding: 2em 1em 1em;
 }
 
-#section-b ul, #section-c ul {
+#section-b ul, #section-c ul, #section-c-1 ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -168,7 +170,7 @@ p {
     padding: 1.3em;
 }
 
-/* Section */
+/* Section C */
 
 #section-c {
     background: #fff;
@@ -178,19 +180,39 @@ p {
 
 #section-c li {
     margin-bottom: 2em;
+}
+
+#section-c img {
+    border-radius: 50%;
+}
+
+/* Section C-1 */
+
+#section-c-1 {
     background: #333;
     color: #fff;
+    padding: 1em 1em 1em;
+}
+
+#section-c-1 li {
+    margin-bottom: 2em;
+}
+
+#section-c-1 img {
+    border-radius: 50%;
 }
 
 /* Section D / Boxes */
 
 #section-d .box {
     padding: 2em;
-    color: #fff;
+    background: #fff;
+    color: #333;
 }
 
 #section-d .box:first-child {
     background: #2690d4;
+    color: #fff;
 }
 
 #section-d a {
@@ -217,6 +239,12 @@ p {
 }
 
 /* Media Queries */
+@media(max-width: 700px) {
+    #section-c-1 .ld {
+        display: none;
+    }
+}
+
 @media(max-width: 1000px){
     header {
         padding : 0 0;
@@ -247,6 +275,7 @@ p {
         color: #fff;
         background: rgba(0, 0, 0, .5);
     }
+
 }
 
 @media(min-width: 700px){
@@ -292,8 +321,36 @@ p {
     }
 
     #section-c li {
-        width: 26%;
+        width: 15%;
     }
+
+    #section-c-1 .review-content-wrap {
+        grid-column: span 4;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #section-c-1 .review-content-wrap:after {
+        display: table;
+        clear: both    
+    }
+
+    #section-c-1 .review-img {
+        float: left;
+        width: 8%;
+        padding: 20px;
+    }
+
+    #section-c-1 .review-content-text {
+        float: left;
+        width: 80%;
+        padding: 20px;
+    }
+
+    #section-c-1 .sd {
+        display: none;
+    }
+
 
     #main-footer div {
         grid-column: span 4;
